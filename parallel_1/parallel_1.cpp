@@ -4,11 +4,12 @@
  */
 
 #include "stdafx.h"
+const char* fname = "data.input";
 
 int generator(unsigned process, unsigned size){
 	srand((unsigned)time(0));
 	std::ofstream out;
-	out.open("input.txt",std::ios::trunc);
+	out.open(fname,std::ios::trunc);
 	if(out.is_open()){
 		//so stupid, but i have'n got time
 		out << size << " " << process << std::endl;
@@ -25,9 +26,9 @@ int _tmain(int argc, _TCHAR* argv[]){
 #ifdef _OPENMP
 	std::cout << "SUCCESS. You have openmp" << std::endl;
 	std::ifstream input;
-	input.open("input.txt");
+	input.open(fname);
 	if (!input.is_open()){
-		std::cout << "Can't open file" << std::endl;
+		std::cout << "Can't open file " << fname << std::endl;
 		exit(EXIT_FAILURE);
 	}
 

@@ -1,4 +1,7 @@
-data.input
+# Special for test files
+*.input
+*.output
+
 # Compiled Object files
 *.slo
 *.lo
