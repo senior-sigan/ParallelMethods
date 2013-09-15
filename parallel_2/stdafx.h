@@ -9,7 +9,12 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <vector>
+#include <iostream>
+#include <ctime>
+#include <omp.h>
 
-
+typedef std::vector<double> VECTOR;
+typedef std::vector<double>::iterator ITERATOR;
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
