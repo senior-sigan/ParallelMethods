@@ -1,4 +1,8 @@
-ParallelMethods
+ParallelMethods by Siganoov Ilya
 ===============
 
-labs for parallel methods with openMP
+MIT license
+
+Parallel methods made using openMP
+
+![](https://raw.github.com/blan4/ParallelMethods/master/bad_boy.jpg)
