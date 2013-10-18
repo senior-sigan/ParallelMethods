@@ -5,14 +5,8 @@
 
 #include "stdafx.h"
 
-
-void sequential(VECTOR inp, VECTOR& sum){
-	unsigned len = inp.size();
-	sum[0] = inp[0];
-	for (unsigned i = 1; i < len; ++i){
-		sum[i] = sum[i-1] + inp[i];
-	}
-}
+const char* fname = "vector.txt";
+const char* summs_fname = "summs.txt";
 
 double parallel(VECTOR arr, VECTOR& summs, unsigned nProcess = 2){
 
@@ -25,6 +19,8 @@ double parallel(VECTOR arr, VECTOR& summs, unsigned nProcess = 2){
 	for (int d = 0; d < m; ++d){
 #pragma omp parallel for
 		for (int k = 0; k < nElements; ++k){
+			if (k % 2 != 0)
+				continue;
 			if (k >= pow(2,d))
 				summs[k] = arr[k] + arr[k - pow(2,d)];
 			else
@@ -39,20 +35,43 @@ double parallel(VECTOR arr, VECTOR& summs, unsigned nProcess = 2){
 int _tmain(int argc, _TCHAR* argv[])
 {
 #ifdef _OPENMP
-	int nElements = 1000000;
+	int nElements = 10000;
 	VECTOR arr(nElements);
 	VECTOR summs(nElements,0);
+	VECTOR summs2(nElements,0);
 	for(int i = 0; i < nElements; ++i){
 		arr[i] = rand();
 	}
-	printf_s("Start calc sums parallel. Array.size = %d\n",nElements);
-	double duration = parallel(arr, summs,3);
-	std::cout << "\nTime elapsed "<<duration << std::endl;
+	int nProcess = 3;
+	printf_s("Start calc sums parallel on %d process\n",nProcess);
+	double duration = parallel(arr, summs,nProcess);
+	std::cout << "Time elapsed "<<duration << std::endl;
 
-	printf_s("Start calc sums parallel. Array.size = %d\n",nElements);
-	double duration_seq = parallel(arr, summs,1);
-	std::cout << "\nTime elapsed "<<duration_seq << std::endl;
+	printf_s("Start calc sums sequential\n");
+	double duration_seq = parallel(arr, summs2,1);
+	std::cout << "Time elapsed "<<duration_seq << std::endl;
+	std::cout << "Acceleration " << duration_seq / duration << std::endl;
 
+	std::cout << "Saving" <<std::endl;
+	std::ofstream out;
+	out.open(fname,std::ios::trunc);
+	if(out.is_open()){
+		for (VECTOR::const_iterator i = arr.begin(); i != arr.end(); ++i){
+			out << *i << " ";
+		}
+		out << std::endl;
+		out.close();
+	}
+
+	std::ofstream sum_out;
+	sum_out.open(summs_fname,std::ios::trunc);
+	if(sum_out.is_open()){
+		for (VECTOR::const_iterator i = summs.begin(); i != summs.end(); ++i){
+			sum_out << *i << " ";
+		}
+		sum_out << std::endl;
+		sum_out.close();
+	}
 	return EXIT_SUCCESS;
 #endif
 	return EXIT_FAILURE;

@@ -9,13 +9,12 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include <vector>
-#include <iostream>
-#include <ctime>
 #include <omp.h>
-#include <fstream>
+#include <iostream>
+#include <vector>
+#include <ctime>
 
-typedef std::vector<double> VECTOR;
-typedef std::vector<double>::iterator ITERATOR;
+typedef std::vector<double> ROW;
+typedef std::vector<ROW> MATRIX;
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы

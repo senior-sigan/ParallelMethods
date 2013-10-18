@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_1", "parallel_1\pa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_2", "parallel_2\parallel_2.vcxproj", "{22C76418-798E-41B0-BA7E-D3102BD866A6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_3", "parallel_3\parallel_3.vcxproj", "{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{22C76418-798E-41B0-BA7E-D3102BD866A6}.Debug|Win32.Build.0 = Debug|Win32
 		{22C76418-798E-41B0-BA7E-D3102BD866A6}.Release|Win32.ActiveCfg = Release|Win32
 		{22C76418-798E-41B0-BA7E-D3102BD866A6}.Release|Win32.Build.0 = Release|Win32
+		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Debug|Win32.Build.0 = Debug|Win32
+		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Release|Win32.ActiveCfg = Release|Win32
+		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
