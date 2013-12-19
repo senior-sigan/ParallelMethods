@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_1", "parallel_1\parallel_1.vcxproj", "{F7BA51B8-DF96-42EE-B7A5-C65813101717}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_2", "parallel_2\parallel_2.vcxproj", "{22C76418-798E-41B0-BA7E-D3102BD866A6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_3", "parallel_3\parallel_3.vcxproj", "{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_4", "parallel_4\parallel_4.vcxproj", "{62B1B86B-0F46-48C6-B336-CD73B4BF06B5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_5", "parallel_5\parallel_5.vcxproj", "{3D694971-B8C4-4946-BF26-4475A94B938C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,14 @@ Global
 		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Debug|Win32.Build.0 = Debug|Win32
 		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Release|Win32.ActiveCfg = Release|Win32
 		{C2DA4D8E-B202-46A0-9ECE-B0D23552AE2B}.Release|Win32.Build.0 = Release|Win32
+		{62B1B86B-0F46-48C6-B336-CD73B4BF06B5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{62B1B86B-0F46-48C6-B336-CD73B4BF06B5}.Debug|Win32.Build.0 = Debug|Win32
+		{62B1B86B-0F46-48C6-B336-CD73B4BF06B5}.Release|Win32.ActiveCfg = Release|Win32
+		{62B1B86B-0F46-48C6-B336-CD73B4BF06B5}.Release|Win32.Build.0 = Release|Win32
+		{3D694971-B8C4-4946-BF26-4475A94B938C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D694971-B8C4-4946-BF26-4475A94B938C}.Debug|Win32.Build.0 = Debug|Win32
+		{3D694971-B8C4-4946-BF26-4475A94B938C}.Release|Win32.ActiveCfg = Release|Win32
+		{3D694971-B8C4-4946-BF26-4475A94B938C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
